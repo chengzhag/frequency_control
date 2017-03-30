@@ -24,7 +24,8 @@
 NOKIA5110 lcd;
 Button key_up(&KEY_UP, 1);
 Button key_down(&KEY_DOWN, 1);
-
+ParallelGpio gpioOut;
+unsigned char digitOut = 0;
 
 void setup()
 {
@@ -33,9 +34,18 @@ void setup()
 	lcd.begin();
 	key_up.begin();
 	key_down.begin();
+	gpioOut.bit[0] = &PB7;
+	gpioOut.bit[1] = &PB6;
+	gpioOut.bit[2] = &PB5;
+	gpioOut.bit[3] = &PB4;
+	gpioOut.bit[4] = &PB3;
+	gpioOut.bit[5] = &PB2;
+	gpioOut.bit[6] = &PB1;
+	gpioOut.bit[7] = &PB0;
+	gpioOut.mode(OUTPUT_PP);
 }
 
-unsigned char digitOut = 0;
+
 
 
 int main(void)
@@ -70,7 +80,8 @@ int main(void)
 			digitOut--;
 		}
 		lcd.printf(0, 2, "digitOut:%u    ", digitOut);
-		delay_ms(5);
+		gpioOut.write(digitOut);
+		delay_ms(20);
 	}
 
 }
