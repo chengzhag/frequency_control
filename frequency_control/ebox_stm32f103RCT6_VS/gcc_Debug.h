@@ -1167,6 +1167,7 @@
 //Project\stm32f10x\mdk\RTE
 //os\FreeRTOS\Source\include
 //os\FreeRTOS\Source\portable\RVDS\ARM_CM3
+//user\matlabSpline
 //mcu/stm32f10x/libraries/CMSIS/CM3/CoreSupport
 //mcu/stm32f10x/libraries/STM32F10x_StdPeriph_Driver/inc
 //mcu/stm32f10x/libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x
@@ -1193,6 +1194,7 @@
 //Project/stm32f10x/mdk/RTE
 //os/FreeRTOS/Source/include
 //os/FreeRTOS/Source/portable/RVDS/ARM_CM3
+//user/matlabSpline
 // --- Include directories end --- //
 
 
