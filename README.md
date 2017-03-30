@@ -1,74 +1,8 @@
-# ebox_stm32f103RCT6_VS
-为stm32f103RCT6配置好的ebox，visual studio项目，方便以后使用
-
-vs工程和移植注意事项在ebox_stm32f103RCT6_VS/ebox_stm32f103RCT6_VS/ebox_stm32f103RCT6_VS文件夹下
-
-## 包含驱动
-### 逻辑器件
-- 74HC595：移位寄存器
-### 储存
-- E2PROM
-    - AT24C02
-- Flash
-    - AT45DB
-    - w25x16
-- RAM
-    - FM25V
-- SD/mmc
-    - mmc_sd
-### 输入设备
-- 按键
-    - Button
-    - key_dm
-- 矩阵键盘
-    - TM1638：带键盘扫描接口的LED驱动控制专用电路
-### 输出设备
-- 显示屏
-    - FT800
-    - lcd_1.8
-    - LCD1602
-    - Nokia5110
-    - OLED
-    - OLED_ssd1306
-- LED
-    - colorled
-    - LED
-    - led_segment：数码管，使用74hc595
-    - TM1638：带键盘扫描接口的LED驱动控制专用电路
-    - ws2812：内置IC串行RGBLED
-- OSD
-    - Max7456：单通道、单色随屏显示（OSD）发生器，内置EEPROM
-- GPIO
-    - parallel_gpio：8位并行输出，可以组合任意端口
-### 传感器
-- 湿度传感器
-    - dht11
-- 温度传感器
-    - ds18b20
-- 尘埃传感器
-    - GP2Y1051
-- 红外遥控
-    - ir_decoder
-    - ir_encoder
-- 陀螺仪
-    - MPU6050
-    - L3G4200D
-- 电子罗盘
-    - lsm303dhlc
-- ADC
-    - LTC1446：12位逐次逼近式工作的A/D转换器
-- 距离传感器
-    - ultrasonic_wave：超声波
-### 传输
-- 2.4G无线
-    - NRF24L01
-- 数传
-    - si4432：低于1GHz频段的无线数传芯片
-- 以太网
-    - w5500：全硬件TCP/IP嵌入式以太网控制器
-- wifi
-    - ESP8266
-### RTC（实时时钟）
-- ds3231：i2c
-### 未知用途
-- encoder
+# frequency_control
+>@全体成员 开工啦.校队初次训练题按照每个人为单位进行制作，具体题目要求参照群文件《2017初次训练题.pdf》，所用基本元器件由校队统一进行发放。
+元件发放时间：3月25日星期六上午9:30~11:30;
+元件发放地点：立人楼B306
+发放单份元件列表为：
+       DAC0832×2，TL082×2，DIP20芯片座×2，DIP8芯片座×2，杜邦线20P×1，洞洞板×1,8P拨码开关×1，其他所需电阻电容可在元件发放时间内在B306适量自取。
+同时校队提供MSPEXP430F5529LP评估板借用，如有需要，请在该次训练题测评当天及时归还。
+另外本次训练题不提供额外的元件申请。
