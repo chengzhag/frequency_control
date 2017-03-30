@@ -17,7 +17,7 @@
 #include "nokia5110.h"
 #include "button.h"
 #include "parallel_gpio.h"
-#include "interpolation.h"
+//#include "interpolation.h"
 
 #define KEY_UP PC5
 #define KEY_DOWN PA15
@@ -31,12 +31,12 @@ ParallelGpio gpioOut;
 unsigned char digitOut = 1;
 double fc = 0;
 
-static double interOut[] = {1,3,5,7,12,14,19,20,22,29,\
-34,36,48,53,68,83,101,116,131,141,163,182,209,228,254};
-static double interFc[] = {20,60,184,244,250,300,400,\
-500,550,600,700,800,1000,1200,1500,1800,2200,\
-2500,2800,3000,3500,4000,4500,5000,5500 };
-sky::Interpolation interpolation(interOut, interFc,25);
+//static double interOut[] = {1,3,5,7,12,14,19,20,22,29,\
+//34,36,48,53,68,83,101,116,131,141,163,182,209,228,254};
+//static double interFc[] = {20,60,184,244,250,300,400,\
+//500,550,600,700,800,1000,1200,1500,1800,2200,\
+//2500,2800,3000,3500,4000,4500,5000,5500 };
+//sky::Interpolation interpolation(interOut, interFc,25);
 
 void setup()
 {
@@ -109,7 +109,8 @@ int main(void)
 		}
 
 		lcd.printf(0, 2, "digitOut:%u    ", digitOut);
-		fc = interpolation(digitOut);
+		//fc = interpolation(digitOut);
+		fc = 21.68*digitOut;
 		lcd.printf(0, 3, "fc:%.0fHz    ", fc);
 		gpioOut.write(digitOut);
 		delay_ms(20);
