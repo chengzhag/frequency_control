@@ -110,7 +110,7 @@ int main(void)
 
 		lcd.printf(0, 2, "digitOut:%u    ", digitOut);
 		//fc = interpolation(digitOut);
-		fc = 21.68*digitOut;
+		fc = 21.56*digitOut;
 		lcd.printf(0, 3, "fc:%.0fHz    ", fc);
 		gpioOut.write(digitOut);
 		delay_ms(20);
